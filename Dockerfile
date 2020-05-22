@@ -13,5 +13,5 @@ COPY --from=build /app/build /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf.template
 COPY start.sh ./
 RUN chmod +x start.sh
-CMD ["/app/start.sh"]
+CMD ["start.sh"]
 #CMD ["nginx", "-g", "daemon off;"]
