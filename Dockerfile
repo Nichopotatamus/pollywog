@@ -15,4 +15,5 @@ ENV PORT=$PORT
 RUN envsubst < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf
 RUN cat /etc/nginx/conf.d/default.conf
 RUN echo $PORT
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["echo", "$PORT"]
+#CMD ["nginx", "-g", "daemon off;"]
